@@ -362,7 +362,7 @@ participant: mek.key.participant
                 await sleep(1500)
                 zetsubo.sendMessage(m.chat, reactionMessage)*/
 //=================================================//
-if (!zetsubo.public) {
+if (!zetsubo.private) {
 if (!m.key.fromMe) return
 }
 let rn = ['recording']
@@ -1414,9 +1414,9 @@ fs.writeFileSync("./pushkont/contacts.json", JSON.stringify(contacts))
 }
 break
 //=================================================//
-case 'public': {
+case 'private': {
 if (!isCreator) return reply('*Premium Command*') 
-zetsubo.public = true
+zetsubo.public = false
 zetsreply('Sukse Change To Public')
 }
 break
